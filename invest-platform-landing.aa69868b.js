@@ -20,10 +20,8 @@ document.addEventListener('click', (e)=>{
                 ...document.querySelectorAll('.lang__list li')
             ].forEach((li)=>li.classList.remove('active'));
             target.classList.add('active');
-            console.log(target);
             return;
         }
-        console.log('s');
         dropdownBtn.classList.toggle('lang__dropdown--open');
         langList.classList.toggle('lang__list--open');
     }

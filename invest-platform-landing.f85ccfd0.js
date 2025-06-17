@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = form.querySelector('input[name="name"]');
     const emailInput = form.querySelector('input[name="email"]');
     const messageInput = form.querySelector('textarea[name="message"]');
-    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitBtn = document.querySelector('.form__btn');
+    if (!form || !nameInput || !emailInput || !messageInput || !submitBtn) return;
     const nameError = nameInput.nextElementSibling;
     const emailError = emailInput.nextElementSibling;
     const messageError = messageInput.nextElementSibling;
