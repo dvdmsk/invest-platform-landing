@@ -3,12 +3,10 @@ const answers = [...document.querySelectorAll('.faq__answer')];
 
 document.addEventListener('click', (e) => {
   const target = e.target.closest('.faq__block');
+  if (!target) return;
+
   const btn = target.querySelector('.faq__btn');
   const answ = target.querySelector('.faq__answer');
-
-  if (!target) {
-    return;
-  }
 
   buttons.forEach((b) => {
     if (b !== btn) {
