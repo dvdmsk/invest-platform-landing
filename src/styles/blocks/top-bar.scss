@@ -1,0 +1,82 @@
+.top-bar {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 40px;
+  }
+
+  @media (width >= 1200px) {
+    padding-inline: 120px 60px;
+  }
+
+  &__logo {
+    font-size: 15px;
+    font-weight: 900;
+    margin-right: 57px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+
+  &__btn-menu {
+    width: 18px;
+    height: 12px;
+    position: relative;
+    margin-left: 10px;
+
+    & span {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background-color: $dark-gray;
+      border-radius: 1px;
+      transition: all 0.3s;
+
+      &:nth-of-type(1) {
+        top: 50%;
+        transform: translateY(calc(-100% - 4px));
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-of-type(3) {
+        top: 50%;
+        transform: translateY(calc(-100% + 6px));
+      }
+    }
+
+    @include on-desktop {
+      display: none;
+      margin-left: 51px;
+    }
+
+    &--close {
+      & span:first-of-type {
+        transform: rotate(45deg);
+      }
+
+      & span:nth-last-of-type(2) {
+        transform: scaleX(0);
+      }
+
+      & span:last-of-type {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

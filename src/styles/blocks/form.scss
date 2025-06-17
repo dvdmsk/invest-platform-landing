@@ -1,0 +1,74 @@
+.form {
+  padding: 48px 16px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid $violet;
+  max-width: 585px;
+  display: grid;
+  justify-items: center;
+  gap: 24px;
+  width: 100%;
+
+  @include on-tablet {
+    padding: 80px;
+  }
+
+  &__control {
+    width: 100%;
+    position: relative;
+  }
+
+  &__input {
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4f4f4f;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: #828282;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0%;
+    }
+
+    &:focus {
+      border: 1px solid #828282;
+    }
+
+    &--valid {
+      border: 1px solid #0eac00;
+    }
+
+    &--error {
+      border: 1px solid #eb5757;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 89px;
+    padding-block: 7px;
+  }
+
+  &__btn {
+    width: 172px;
+    height: 54px;
+
+    &:disabled {
+      background-color: #E0E0E0;
+      color: #828282;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -15px;
+    color: #eb5757;
+    display: none;
+  }
+}

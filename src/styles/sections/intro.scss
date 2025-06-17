@@ -1,0 +1,95 @@
+.intro {
+  background-color: $bg;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include on-desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    max-width: 585px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 32px;
+
+    @include on-tablet {
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    @include on-desktop {
+      align-items: start;
+      margin-top: 0;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 100px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+
+    & img {
+      max-width: 280px;
+
+      @include on-tablet {
+        max-width: 418px;
+      }
+
+      @include on-desktop {
+        max-width: 482px;
+      }
+    }
+
+    @include on-desktop{
+      margin-bottom: 24px;
+      margin-top: 0;
+    } 
+  }
+  
+  &__title {
+    text-align: center;
+
+    @include on-desktop {
+      text-align: left;
+      font-size: 64px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    max-width: 483px;
+  
+    @include on-tablet {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    @include on-desktop {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    margin-top: 32px;
+    width: 100%;
+
+    @include on-tablet {
+      max-width: 257px;
+    }
+
+    @include on-desktop {
+      margin-top: 48px;
+    }
+  }
+}

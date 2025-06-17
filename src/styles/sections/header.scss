@@ -1,0 +1,45 @@
+.header {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+  z-index: 5;
+
+  &__lang {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  &__sign {
+    display: none;
+    
+  
+    @include on-tablet {
+      display: block;
+      margin-right: 48px;
+    }
+
+
+    @include on-desktop {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+    
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+}

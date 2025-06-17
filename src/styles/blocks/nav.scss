@@ -1,0 +1,23 @@
+.nav {
+  display: none;
+  align-items: center;
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &--tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include on-desktop {
+    display: flex;
+  }
+
+  &--tablet {
+    display: block;
+  }
+}

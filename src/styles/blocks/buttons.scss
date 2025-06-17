@@ -1,0 +1,29 @@
+.btn {
+  padding: 20px 64px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #4F62F6;
+  border: none;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  
+  &:hover {
+    background-color: #7181FC;
+  }
+
+  &:active {
+    background-color: #354BF4;
+  }
+
+  &__sign {
+    padding: 13px 24px;
+  }
+
+  &__menu-sign {
+    margin-top: 20px;
+  }
+}

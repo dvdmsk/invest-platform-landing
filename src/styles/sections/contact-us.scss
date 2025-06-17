@@ -1,0 +1,83 @@
+.contact-us {
+  background-color: $bg;
+  padding-bottom: 48px;
+
+  @include on-desktop {
+    padding-bottom: 120px;
+  }
+
+  &__wrapper {
+    padding-top: 48px;
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+
+    @include on-desktop {
+      padding-top: 120px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__info {
+    @include on-desktop {
+      max-width: 483px;
+    } 
+  }
+
+  &__title {
+    @include on-tablet {
+      text-align: center;
+    }
+
+    @include on-desktop {
+      text-align: left;
+    }
+  }
+
+  &__staff {
+    margin-top: 24px;
+
+    @include on-tablet {
+      margin-top: 32px;
+    }
+  }
+
+  &__owned {
+    margin-top: 24px;
+
+    @include on-tablet {
+      margin-top: 32px;
+    }
+
+    @include on-desktop {
+      margin-top: 48px;
+    }
+  }
+
+  &__service {
+    margin-top: 16px;
+
+    &:nth-of-type(1) {
+      margin-top: 17px;
+
+      @include on-tablet {
+        margin-top: 24px;
+      }
+    }
+
+    & + p {
+      margin-top: 8px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @include on-desktop {
+      justify-content: end;
+    }
+  }
+}
