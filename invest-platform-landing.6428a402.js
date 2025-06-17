@@ -1,0 +1,2 @@
+let buttons=[...document.querySelectorAll(".faq__block img")],answers=[...document.querySelectorAll(".faq__answer")];document.addEventListener("click",e=>{let t=e.target.closest(".faq__block");if(!t)return;let s=t.querySelector(".faq__btn"),a=t.querySelector(".faq__answer");buttons.forEach(e=>{e!==s&&e.classList.remove("faq__btn--open")}),answers.forEach(e=>{e!==a&&e.classList.remove("faq__answer--open")}),a.classList.toggle("faq__answer--open"),s.classList.toggle("faq__btn--open")});
+//# sourceMappingURL=invest-platform-landing.6428a402.js.map
